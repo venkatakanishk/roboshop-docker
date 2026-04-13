@@ -1,0 +1,11 @@
+services:
+  mongodb:
+    build:
+      dockerfile: mongodb.Dockerfile
+    image: kanishk244/mongodb:1.0.0
+    container_name: mongodb
+networks:
+  default:
+    driver: bridge
+    name: roboshop
+    external: false # if yes we need to create the network manually
