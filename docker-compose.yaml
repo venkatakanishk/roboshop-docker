@@ -1,7 +1,6 @@
 services:
   mongodb:
-    build:
-      dockerfile: ./mongodb
+    build: ./mongodb
     image: kanishk244/mongodb:1.0.0
     container_name: mongodb
 networks:
