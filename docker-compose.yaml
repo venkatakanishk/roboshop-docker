@@ -11,6 +11,14 @@ services:
     container_name: user
     depends_on:
     - redis
+    - mongodb
+  cart:
+    build: ./CART
+    image: kanishk244/cart:1.0.0
+    container_name: cart
+    depends_on:
+    - redis
+    - catalogue
   frontend:
     build: ./frontend
     image: kanishk244/frontend:1.0.0
@@ -19,6 +27,8 @@ services:
     - "80:80"
     depends_on:
     - catalogue
+    - user
+    - cart
   mongodb:
     build: ./mongodb
     image: kanishk244/mongodb:1.0.0
