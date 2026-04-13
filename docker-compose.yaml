@@ -6,11 +6,11 @@ services:
     depends_on:
     - mongodb
   user:
-    build: ./user
+    build: ./USER
     image: kanishk244/user:1.0.0
     container_name: user
     depends_on:
-    - 
+    - redis
   frontend:
     build: ./frontend
     image: kanishk244/frontend:1.0.0
