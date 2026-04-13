@@ -5,6 +5,12 @@ services:
     container_name: catalogue
     depends_on:
     - mongodb
+  user:
+    build: ./user
+    image: kanishk244/user:1.0.0
+    container_name: user
+    depends_on:
+    - 
   frontend:
     build: ./frontend
     image: kanishk244/frontend:1.0.0
@@ -17,6 +23,9 @@ services:
     build: ./mongodb
     image: kanishk244/mongodb:1.0.0
     container_name: mongodb
+  redis:
+    image: redis:7.0
+    container_name: redis
 networks:
   default:
     driver: bridge
