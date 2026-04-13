@@ -1,4 +1,10 @@
 services:
+  catalogue:
+    build: ./catalogue
+    image: kanishk244/catalogue:1.0.0
+    container_name: catalogue
+    depends_on:
+    - mongodb
   mongodb:
     build: ./mongodb
     image: kanishk244/mongodb:1.0.0
