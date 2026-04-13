@@ -5,6 +5,14 @@ services:
     container_name: catalogue
     depends_on:
     - mongodb
+  frontend:
+    build: ./frontend
+    image: kanishk244/frontend:1.0.0
+    container_name: frontend
+    ports:
+    - "80:80"
+    depends_on:
+    - catalogue
   mongodb:
     build: ./mongodb
     image: kanishk244/mongodb:1.0.0
