@@ -45,6 +45,8 @@ services:
     - catalogue
     - user
     - cart
+    - shipping
+    - payment
   mongodb:
     build: ./mongodb
     image: kanishk244/mongodb:1.0.0
