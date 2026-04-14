@@ -28,8 +28,8 @@ services:
     - mysql
   payment:
     build: ./payment
-    image: kanishk244/shipping:1.0.0
-    container_name: shipping
+    image: kanishk244/payment:1.0.0
+    container_name: payment
     depends_on:
     - cart
     - user
