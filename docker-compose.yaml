@@ -80,7 +80,7 @@ networks:
     name: roboshop
     external: false # if yes we need to create the network manually
 volumes:
-  mongodb
-  redis
-  mysql
-  rabbitmq
+  mongodb:
+  redis:
+  mysql:
+  rabbitmq:
